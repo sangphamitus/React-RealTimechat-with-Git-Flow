@@ -1,0 +1,89 @@
+#loginContainer 
+{
+  
+    margin: 0;
+    padding: 0;
+    background-color: rgba(87, 23, 123, 0.916);
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.card 
+{
+    
+    justify-content: center;
+    box-shadow: 3px 5px 3px ;
+    width: fit-content;
+ 
+    box-sizing: content-box;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black ;
+    border-radius: 2ex;
+
+    animation-name: joinin;
+    animation-duration: 1s;
+}
+.centertext{
+    text-align: center;
+}
+fieldset{
+    border:none;
+    display: table;
+    font-size: medium;
+}
+p
+{
+    display: table-row;   
+}
+label
+{
+    padding: 0 1rem 1rem 0;
+    display: table-cell;
+    font-weight: 500;
+}
+input{
+    display: table-cell;
+}
+.buttonbox
+{
+    margin:1rem 0 1rem 0 ;
+    display: flex;
+    justify-content: center;
+}
+.buttonbox button
+{
+    transition: ease-in-out 0.2s;
+    font-size: large;
+    border-radius:1ex ;
+    border:none;
+    background-color:rgb(219, 215, 239);
+    padding:0.5rem 1rem 0.5rem 1rem;
+    color:rgb(82, 29, 94);
+    box-shadow: 2px 2px 2px;
+}
+.buttonbox button:hover {
+    background-color:rgb(110, 28, 147);
+    color:rgb(255, 253, 255);
+    box-shadow: 3px 3px 6px black;
+  
+}
+
+@keyframes joinin {
+   0% {
+    transform: scale(0,0);
+   }
+
+   80% {
+    transform: scale(1.2,1.2);
+   }
+   
+ 
+    100% {
+    transform: scale(1,1);
+   }
+
+
+}

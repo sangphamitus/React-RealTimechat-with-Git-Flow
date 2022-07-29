@@ -12,8 +12,9 @@ export default function Navbars()
     return(
         <div className="container">
             <ul className="NavMenu">
-                <li><Link to={"/"} > <button onClick={event=>{setButtonClicked('/')}} className={buttonClicked==='/'?"clicked":null} type="submit" >Join</button></Link> </li>
+
                 <li><Link to={"/chat"}><button onClick={event=>{setButtonClicked('/chat')}} className={buttonClicked==='/chat'?"clicked":null} type="submit" >Chat</button></Link></li>
+                <li><Link to={"/post"}><button onClick={event=>{setButtonClicked('/post')}} className={buttonClicked==='/post'?"clicked":null} type="submit" >Post</button></Link></li>
             </ul>
             
         </div>
