@@ -16,8 +16,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" component={<Join/>} element={<Join/>}/>
-          <Route path="/chat" component={<Chat/>} element={<div id="getchat"><Navbars/><Chat/></div>}/>
-          <Route path="/post" component={<Post/>} element={<div id="getpost"><Navbars/><Post/></div>}/>
+          <Route path="/chat" component={<Chat/>} element={<Chat/>}/>
+          <Route path="/post" component={<Post/>} element={<Post/>}/>
         </Routes>    
         </Router> 
   </>

@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 export default function Join()
 {
     const [room,setRoom] =useState('');
-    const [username,setUsername]=useState('');
+    const [password,setPassword]=useState('');
+    const [name,setName]=useState("");
 
     return(
         <div className="container" id="loginContainer">
@@ -17,8 +18,14 @@ export default function Join()
                     <p>
                     <label>Username:</label>
                     <input type="text" placeholder="username" onChange={event=> {
-                        setUsername(event.target.value);
+                        setName(event.target.value);
                     }}></input> 
+                    </p>
+                    <p> 
+                    <label>Pass:</label>
+                    <input type="password"  placeholder="password" onChange={event=> {
+                        setPassword(event.target.value);
+                    }}></input>
                     </p>
                     <p> 
                     <label>Room:</label>
@@ -27,9 +34,9 @@ export default function Join()
                     }}></input>
                     </p>
                     <div className="buttonbox">
-                        <Link to={`/chat?name=${username}&room=${room}`}
-                        onClick= {event=>(!username||!room)?event.preventDefault():null }>
-                        <button  type="submit"  className={(!username||!room)?'disable':null}>Login</button>
+                        <Link to={`/chat?name=${name}&room=${room}`}
+                        onClick= {event=>(!name||!room||!password)?event.preventDefault():null }>
+                        <button  type="submit"  className={(!name||!room||!password)?'disable':null}>Login</button>
                         </Link>
                         
                     </div>

@@ -1,11 +1,13 @@
 import React from "react";
-
+import Navbars from "../Navbars/Navbars";
 export default function Post()
 {
     return(
-        <div className="container">
-            
+        <>
+        <Navbars/>
+        <div>
             <h2>Post</h2>
         </div>
+        </>
     )
 }
