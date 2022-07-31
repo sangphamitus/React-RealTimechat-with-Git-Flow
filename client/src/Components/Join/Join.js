@@ -1,11 +1,35 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import './Join.css'
 import {Link} from 'react-router-dom'
+import io from 'socket.io-client';
+import { v4 as uuidv4 } from 'uuid';
+
+let socket;
+
+const ENDPOINT = 'localhost:5000';
+
+
 export default function Join()
 {
-    const [room,setRoom] =useState('');
+   
     const [password,setPassword]=useState('');
     const [name,setName]=useState("");
+    const ID=uuidv4();
+
+    const ActiveLogin=()=>{
+    socket=io(ENDPOINT,{transports:['websocket']});
+
+
+    socket.emit('join',{ID,name},(error)=> {
+        if (error)
+        {
+            console.log(error);
+        }
+        socket.disconnect();
+        socket.off();
+    })    
+        
+    };
 
     return(
         <div className="container" id="loginContainer">
@@ -27,16 +51,11 @@ export default function Join()
                         setPassword(event.target.value);
                     }}></input>
                     </p>
-                    <p> 
-                    <label>Room:</label>
-                    <input type="text"  placeholder="room" onChange={event=> {
-                        setRoom(event.target.value);
-                    }}></input>
-                    </p>
+                 
                     <div className="buttonbox">
-                        <Link to={`/chat?name=${name}&room=${room}`}
-                        onClick= {event=>(!name||!room||!password)?event.preventDefault():null }>
-                        <button  type="submit"  className={(!name||!room||!password)?'disable':null}>Login</button>
+                        <Link to={`/chat?id=${ID}`}
+                        onClick= {event=>(!name||!password)?event.preventDefault():ActiveLogin() }>
+                        <button  type="submit"  className={(!name||!password)?'disable':null}>Login</button>
                         </Link>
                         
                     </div>
