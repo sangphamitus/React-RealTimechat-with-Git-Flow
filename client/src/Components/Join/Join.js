@@ -14,13 +14,13 @@ export default function Join()
    
     const [password,setPassword]=useState('');
     const [name,setName]=useState("");
-    const ID=uuidv4();
+    const pid=uuidv4();
 
     const ActiveLogin=()=>{
     socket=io(ENDPOINT,{transports:['websocket']});
 
 
-    socket.emit('join',{ID,name},(error)=> {
+    socket.emit('join',{pid,name},(error)=> {
         if (error)
         {
             console.log(error);
@@ -53,7 +53,7 @@ export default function Join()
                     </p>
                  
                     <div className="buttonbox">
-                        <Link to={`/chat?id=${ID}`}
+                        <Link to={`/chat?pid=${pid}`}
                         onClick= {event=>(!name||!password)?event.preventDefault():ActiveLogin() }>
                         <button  type="submit"  className={(!name||!password)?'disable':null}>Login</button>
                         </Link>

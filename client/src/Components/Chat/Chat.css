@@ -1,0 +1,88 @@
+.chat-container {
+    position:fixed;
+    height: 90%;
+}
+    
+.side-display{
+    position: fixed;
+    background-color: rgba(124, 124, 228, 0.785);
+    height: 100%;
+    width: 30%;
+}
+
+.message-display {
+    position: fixed;
+    background-color: rgb(210, 210, 255);
+    height: 100%;
+    width: 70%;
+    left:30%;
+}
+
+.viewpoint {
+    height:90vh;
+    width: 100vw;
+}
+.input-field {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(233, 233, 255);
+    height: 32px;
+    margin-bottom: 5px;
+    padding:10px;
+}
+.message-field {
+    display: block;
+    height: -moz-calc(85vh - 32px);
+    height: -webkit-calc(85vh - 32px);
+    height: calc(85vh - 32px) ;
+    background-color: rgb(225, 225, 248);
+    
+}
+.input-field textarea {
+    border-radius: 1ex;
+    border:1px solid rgb(210, 210, 255);
+    width: 80%;
+    padding:10px;
+    resize: none;
+    box-sizing: border-box;
+    overflow: auto;
+    
+}
+.submit-button {
+    border-radius: 1ex;
+    background-color: rgb(151, 112, 236);
+    color: aliceblue;
+    border: none;
+    margin-left: 2%;
+}
+
+.submit-button:hover {
+    background-color: rgb(123, 72, 234);
+    color: rgb(247, 247, 247);
+    
+}
+.submit-button .disable {
+  display: none;
+}
+.room-name {
+    
+    padding-left: 2ex;
+    background-color: rgb(180, 170, 240);
+    display: flex;
+    font-weight: bolder;
+    height: fit-content;
+}
+.message-display {
+    display: block;
+    box-sizing: content-box;
+}
+.view-messages {
+    height: -moz-calc(85vh - 100px);
+    height: -webkit-calc(85vh - 100px);
+    height: calc(85vh - 100px) ;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    flex-direction: column-reverse;
+    display: flex;
+   
+}

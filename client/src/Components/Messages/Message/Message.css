@@ -1,0 +1,50 @@
+
+.messageContainer
+ {
+    display: flex;
+    margin: 0.5ex 2rem 0 2rem;
+ }
+ .sentText {
+    font-size: small;
+    display: block;
+
+}
+.justifyEnd 
+{
+    justify-content: end;
+}
+.justifyStart {
+    justify-content: start;
+}
+.messageBox 
+{
+    display: block;
+    border-radius: 1ex;
+    padding: 1ex;
+    margin: 0.5ex;
+}
+.backgroundBlue
+{
+    background-color: rgb(157, 64, 244);
+}
+.messageText
+{
+    font-size: medium;
+} 
+.colorWhite 
+{
+    color: white;
+}
+
+.backgroundLight
+{
+    background-color: rgb(245, 235, 254);
+}
+
+.colorBlack
+{
+    color: rgb(41, 35, 35);
+}
+.pr-10 {
+    padding-right: 10px;
+}

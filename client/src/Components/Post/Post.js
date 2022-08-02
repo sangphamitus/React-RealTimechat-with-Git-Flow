@@ -1,19 +1,22 @@
-import React,{useEffect} from "react";
-import Navbars from "../Navbars/Navbars";
+import React from "react";
 import queryString from 'query-string';
+import Navbars from "../Navbars/Navbars";
 
-let bigid;
+let href;
 
 export default function Post()
 {
-    const {id} = queryString.parse(window.location.search);
-    bigid=id;
+  
+    
+    const {pid} = queryString.parse(window.location.search);
+    href=pid;
+  
 
     return(
         <>
-        <Navbars pid={bigid}/>
+        <Navbars pid={href}/>
         <div>
-            <h2>Post {bigid}</h2>
+            <h2>Post {href}</h2>
         </div>
         </>
     )
