@@ -86,3 +86,12 @@
     display: flex;
    
 }
+.account-info{
+    height: fit-content;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.bold { 
+    font-weight: bolder;
+}

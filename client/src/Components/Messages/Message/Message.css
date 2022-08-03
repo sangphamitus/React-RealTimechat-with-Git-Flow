@@ -6,7 +6,8 @@
  }
  .sentText {
     font-size: small;
-    display: block;
+    display: flex;
+    
 
 }
 .justifyEnd 

@@ -54,6 +54,23 @@ export default function Chat()
    
     },[ENDPOINT,window.location.search]);
 
+    const enterHandle=(event)=> {
+        event.preventDefault();
+    
+        if(message.length!==0&&message!=='\n')
+        {
+            socket.emit('sendMessage',{pid:hrefPid,message},()=> {
+        
+                setRecvMessage(recvMessage=>[...recvMessage,{username:Name,text:message,sender:true} ]);
+                
+        
+            })
+        }
+        let textarea = document.querySelector('.input-field')
+        textarea.style.height ="32px";
+        setMessage("");
+    }
+    
     const sendMessage =(event)=>{
         event.preventDefault();
        
@@ -104,14 +121,15 @@ export default function Chat()
         <div className="chat-container">
        
             <div className="side-display">
-
+                <div className="account-info">
+                 <p>Account name:<span className="bold"> {Name}</span></p>
+                </div>
             </div>
             <div className="message-display">
 
-             
                 <div className="message-field">
                     <div className="room-name">
-                        <p >account name:{Name}</p>
+                        <p >Room name:{Name}</p>
                     </div>
                     <div className="view-messages">
                        
@@ -127,7 +145,9 @@ export default function Chat()
                        calcHeight(event.target.value);
                         setMessage(event.target.value);}}
                         placeholder="Input text..."
-                        onKeyPress={event=>(event.key=== 'Enter'&&event.target.value!=='\n'&&event.target.value!=='')? sendMessage(event):(event)=>{setMessage('');event.target.value="";}}
+                        onKeyPress={event=>(event.key=== 'Enter'? ( 
+                            event.shiftKey ? 
+                            event.preventDefaul() :  enterHandle(event) ):null)}
                         ></textarea>
                   
                 <button type="button" 

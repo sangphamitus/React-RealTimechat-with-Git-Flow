@@ -14,10 +14,11 @@ export default function Message({messages,sender,username})
         </div> 
         ) : (
         <div className="messageContainer justifyStart">
+     
             <p className="sentText pr-10">{username}</p>
-            <br/>
+ 
             <div className="messageBox backgroundLight">
-            <p className="messageText colorBlack">{ReactEmoji.emojify(messages)}</p>
+                <p className="messageText colorBlack">{ReactEmoji.emojify(messages)}</p>
             </div>
         </div> 
         )
