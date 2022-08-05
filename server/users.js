@@ -38,6 +38,7 @@ const removeUser=(pid)=> {
 }
 
 const getUserInRoom=({room,pid})=> {
+ 
     const filter =Users.filter(user=>user.pid!==pid);
     const list_id=filter.map(user=>user.sid)
     return list_id;

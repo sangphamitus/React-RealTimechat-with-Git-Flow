@@ -62,8 +62,7 @@ export default function Chat()
             socket.emit('sendMessage',{pid:hrefPid,message},()=> {
         
                 setRecvMessage(recvMessage=>[...recvMessage,{username:Name,text:message,sender:true} ]);
-                
-        
+                        
             })
         }
         let textarea = document.querySelector('.input-field')
@@ -122,8 +121,9 @@ export default function Chat()
        
             <div className="side-display">
                 <div className="account-info">
-                 <p>Account name:<span className="bold"> {Name}</span></p>
+                    <p>Account name:<span className="bold"> {Name}</span></p>
                 </div>
+                <input placeholder="Search"></input>
             </div>
             <div className="message-display">
 
