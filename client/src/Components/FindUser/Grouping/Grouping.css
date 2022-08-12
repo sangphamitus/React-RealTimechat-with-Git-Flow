@@ -1,0 +1,72 @@
+.Grouping-container{
+    display: flex;
+    justify-content: center;
+
+ 
+}
+.Grouping-container .card-group {
+    display: block;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    top:50%;
+    left:50%;
+    margin-top: 20vh;
+    padding:1rem;
+    border-radius: 1ex;
+    box-shadow: 2px 2px 2px black;
+}
+
+.Grouping-container input {
+
+    margin:10px;
+}
+.Grouping-container .search-and-exit {
+    display: flex;
+    padding: 2px;
+}
+.Grouping-container .line{ 
+    border:1px solid gray;
+    margin-top: 1ex;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.Grouping-container .search-and-exit {
+    display: flex;
+
+}
+.Grouping-container .exit-button {
+    border-radius: 1ex ;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.Grouping-container .tags{
+    margin-top: 0;
+}
+.Grouping-container .body-card
+{
+   background-color: rgba(41, 37, 45, 0.578);
+    border:1px solid black;
+    box-shadow: none;
+} 
+.Grouping-container .color-w
+{
+    color: azure;
+} 
+.Grouping-container .cursor-pointer
+{
+    cursor: pointer;
+}
+.Grouping-container .createButton {
+    margin-top: 1ex;
+    display: flex;
+    justify-content: right;
+}
+.Grouping-container .hidden {
+    display: hidden;
+}
+.Grouping-container .choss:hover {
+    background-color: #F05454;
+
+}

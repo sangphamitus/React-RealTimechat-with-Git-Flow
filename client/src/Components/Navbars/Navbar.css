@@ -2,7 +2,7 @@
 {
     display: flex;
     align-content: center;
-    
+    height: fit-content;
     box-shadow:1px 1px 5px dimgray;  
 }
 .container, .NavMenu
@@ -11,6 +11,7 @@
     padding:0;
 
 }
+
 .NavMenu ul {
     display: flex;
     justify-content: center;
@@ -20,7 +21,14 @@
     width: 90%;
     
 }
-
+#button-logout{
+    background-color: rgba(111, 111, 212, 0);
+    border: none;
+    color: #ffffff;
+}
+.color-white {
+    color: #ffffff;
+}
 .container .NavMenu li 
 {
     
@@ -30,9 +38,9 @@
 .container .NavMenu li button
 {
     border: none;
-    background-color: rgb(111, 111, 212);
+    background-color: #03506F;
     display: inline-block;
-
+    padding: 8px;
     text-decoration: none;
     align-items: center;
     align-content: center;
@@ -45,19 +53,21 @@
 }
 .container .NavMenu li button:hover, .clicked{
     transition: ease-in-out 0.5s;
-    background-color: cornsilk !important;
-    color:dimgray !important;
+    background-color: #BBBBBB !important;
+    color:#0A043C !important;
     border-radius: 1ex;
-    box-shadow:5px 5px 5px dimgray !important;
+    
 }
 
 .NavMenu {
-    background-color: rgb(111, 111, 212);
+    background-color: #03506F;
   
 }
-#rebuild-logo {
-    border-radius: 50%;
-    height:4rem;
-    margin: 0.5rem 0 0.5rem 1rem;
+
+@media only screen and (min-width: 375px) and (max-width:600px) { 
+  
+    .NavMenu {
     
+        position:sticky;
+    }
 }

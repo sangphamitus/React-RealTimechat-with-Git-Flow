@@ -1,7 +1,7 @@
-POST http://localhost:5000/api/user/login
+POST http://localhost:5000/api/post/fetchPost
 Content-Type: application/json
 
 {
-    "username":"admin123",
-    "password":"lmdasd"
-}   
+
+
+}

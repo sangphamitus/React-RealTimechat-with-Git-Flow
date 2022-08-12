@@ -5,17 +5,25 @@
     
 .side-display{
     position: fixed;
-    background-color: rgba(124, 124, 228, 0.785);
+    background-color: #C4B6B6;
     height: 100%;
-    width: 30%;
-}
+    width:20%;
+   
 
+}
+#rebuild-logo {
+    border-radius: 50%;
+    width:90%;
+    margin: 0.5rem 5% 0.5rem 5%;
+    
+}
 .message-display {
     position: fixed;
     background-color: rgb(210, 210, 255);
     height: 100%;
-    width: 70%;
-    left:30%;
+    width: 80%;
+    left:20%;
+    z-index: -1;
 }
 
 .viewpoint {
@@ -64,7 +72,7 @@
 .submit-button .disable {
   display: none;
 }
-.room-name {
+.room-Username {
     
     padding-left: 2ex;
     background-color: rgb(180, 170, 240);
@@ -95,3 +103,144 @@
 .bold { 
     font-weight: bolder;
 }
+.info {
+    display: block;
+    width: 95%;
+    
+}
+@keyframes movein {
+    0% { width: 0%;    }
+    100% {width: 100%;}    
+}
+@keyframes moveout {
+    0% { width: 0%;    }
+    100% {width: 100%;}    
+}
+@keyframes moveinSide {
+    0% { left: 0%;    }
+        
+}
+@keyframes moveoutSide {
+    100% { left: 0%;    }
+}
+.side-on-button {
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    height: 100%;
+    left:40%;
+    z-index: 10;
+    animation: movein 0.2s ease-in-out;
+
+}
+.side-on-button-off {
+    
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    height: 100%;
+    left:40%;
+    z-index: 10;
+    animation: moveout 0.5s ease-in-out;
+}
+#button-on-off button{
+    border-radius: 1rem;
+    border: none;
+    background-color: #C4B6B6;
+}
+.side-on-button-off button {
+    border-radius: 1ex;
+}
+
+.off{
+    width: 3% !important;
+    animation: moveoutSide 0.3s ease-in-out;
+  
+}
+.on {
+    display: flex;
+    animation: moveinSide 0.3s ease-in-out;
+}
+.offin {
+    width: 97% !important;
+    left:3% !important;
+    right: 0;
+}
+@media only screen and (min-width:312px) and (max-width:612px) {
+    .side-display{
+     
+        height: 100%;
+        width:100%;
+    
+    }
+    .message-display {
+      
+        height: 100%;
+        width: 100%;
+        left:0;
+   
+    }
+    #rebuild-logo{
+        display: flex;
+        width: 20%;
+        justify-content: center;
+      
+    }
+    .account-info {
+        display: flex !important;
+        
+        position: absolute;
+        top: 3%;
+        right: 10%;
+        
+    }
+    .off{
+        width: fit-content !important;
+       animation: none !important;
+
+    }
+    .on {
+        display: flex;
+        animation: none !important;
+    }
+}
+
+@media only screen and (min-width:612px) and (max-width:840px) {
+    .side-display{
+     
+        height: 100%;
+        width:50%;
+    
+    }
+    .message-display {
+      
+        height: 100%;
+        width: 100%;
+        left:0;
+   
+    }
+    #rebuild-logo{
+        display: flex;
+        width: 20%;
+        justify-content: center;
+      
+    }
+    .account-info {
+        display: flex !important;
+        
+        position: absolute;
+        top: 3%;
+        right: 10%;
+        
+    }
+    .off{
+        width: fit-content !important;
+       animation: none !important;
+
+    }
+    .on {
+        display: flex;
+        animation: none !important;
+    }
+}
+

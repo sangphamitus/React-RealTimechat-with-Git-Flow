@@ -6,7 +6,11 @@ const mongoose=require('mongoose')
 const dotenv=require('dotenv')
 const cors =require('cors')
 const {addUsers,findUser,removeUser,updateSid,getUserInRoom}=require('./users')
-const authen=require('./auth')
+const authen=require('./UserHandler/auth')
+const userHandle=require('./UserHandler/userHandle');
+const contact=require('./ContactHandler/getContact');
+const messagesHandle=require('./messagesHandle/getMessagesHandle')
+const postHandle=require('./postHandler/getPost');
 
 var bodyParser = require('body-parser')
 
@@ -27,47 +31,24 @@ app.use(cors())
 
 app.use(router);
 app.use('/api/user',authen);
+app.use('/api/user',userHandle);
+app.use('/api/contact',contact);
+app.use('/api/message',messagesHandle);
+app.use('/api/post',postHandle);
+
 io.on('connect',(socket)=>{
 
-
-    console.log('new connection');
-
-
-    socket.on('updateSid',({pid},callback)=>{
-        const {error,users}=updateSid({pid,sid:socket.id})
-        callback(error);
-        if(!error)
-        {
-            console.log(`update sid: ${users.name}: ${users.sid}`);
-        }
-       
-    })
-
-    socket.on('getInfo',({pid},callback)=>{
-        console.log(pid);
-        const {error,users}=findUser(pid);
-        
-        socket.emit('resInfo',{pid:users.pid,name:users.name},()=>{
-            console.log(`${pid} sent`);
-        });
-      
-        callback(error); 
-    })
-   
-
+ 
     socket.on('disconnect',()=>{
         console.log('new disconnect');
-    
+
     })
 
 
-    socket.on('sendMessage',({pid,message},callback)=>{
-        const room=1;
-        console.log({pid,message});
-        const {users}=findUser(pid);
-        console.log(`${users.name}:${message}`)
-        io.to(getUserInRoom({room,pid})).emit('message',{username:users.name,text:message});
-        callback();
+    socket.on('sendMessage',(callback)=>{
+        
+        io.emit('fetchMessage',{message:'fetch'});
+       
 
     })
 

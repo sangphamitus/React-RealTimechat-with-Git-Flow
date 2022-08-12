@@ -1,0 +1,148 @@
+.post-bar {
+    display: flex;
+    justify-content: center;
+    padding:1ex;
+
+
+}
+.post-bar-search {
+    display: flex;
+    justify-content: center;
+    padding: 1ex;
+    background-color: #bebaba;
+    border-radius: 1ex;
+    box-sizing:border-box;
+    box-shadow: 5px 5px 30px #bebaba;
+    width:60%;
+
+}
+.post-bar-search textarea{
+    border-radius: 1ex;
+    padding: 10px;
+    background-color: #eeeeee;
+
+    width: 90%;
+    overflow: auto;
+    resize: none;
+
+}
+.btn-content{ 
+    margin-left: 1ex;
+    background-color: #5F85DB;
+    color: aliceblue;
+    border:none;
+    font-weight: bolder;
+    border-radius: 1ex;
+}
+
+.btn-content:hover{
+    background-color: #3569e1;
+    color: rgb(255, 255, 255);
+}
+.post-card{
+  
+    padding: 1ex;
+    background-color: #e8e7e7;
+    border-radius: 1ex;
+    box-sizing:border-box;
+    box-shadow: 3px 3px 30px #352F44;
+    width:60%;
+    margin-bottom: 2ex;
+}
+.post-view {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.post-view .user {
+    font-size:x-large;
+    font-weight:900;
+}
+.post-view .time-title{
+    font-size:small;
+ 
+}
+.title {
+    margin: 2ex;
+}
+.content-handle {
+    padding: 2ex;
+}
+.content-handle p {
+    font-size: x-large;
+}
+.dline {
+    border:1px solid #504b5b;
+    background-color: #605a6d;
+    margin: 0;
+    padding:0;
+}
+.function-post{
+    display: flex
+    ;
+    flex-direction: row
+    ;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.vlock-l {
+ 
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.vlock-r {
+ 
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.func button{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    align-content: center;
+    
+    background-color: #e8e7e7;
+
+}
+.vlock-l button{
+    border: none;
+    border-right: 1px solid #352F44;
+    border-top: 1px solid #352F44;
+    margin: 0;
+}
+.vlock-r button{
+    border: none;
+    border-left: 1px solid #352F44;
+    border-top: 1px solid #352F44;
+    margin: 0;
+}
+.func button:hover{
+    background-color: #5a84e5;
+    color: #e8e7e7;
+}
+.func {
+    margin:0;
+    padding:0;
+}
+.cmt-field-limit{
+    height: 30vh;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+
+@media screen and (min-width:300px) and (max-width:617px) {
+    .post-bar-search {
+        width: 90%;
+    }
+    .post-card {
+        width: 80%;
+    }
+}

@@ -1,0 +1,79 @@
+.contact-field {
+    
+    display: flex;
+    justify-content:right;
+    background-color: none;
+   
+  }
+
+.button-contact 
+{
+    color:#393E46;
+    font-weight: bold;
+    font-size: large;
+    width: 100%;
+    padding:1ex;
+    display: flex;
+    justify-content: center;
+    background-color: #d7bf8a;
+    border: none;
+    border-bottom:1px solid black ;
+    border-top: 1px solid black;
+    
+}
+.contact-on {
+  background-color: #FFD369;
+}
+.field{
+    margin-top: 5px;
+    overflow-y: scroll  ;
+}
+.contact-field :hover {
+    background-color:#FFD369;
+}
+/* width */
+.field::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+ .field ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+ .field ::-webkit-scrollbar-thumb {
+    background: rgb(72, 5, 188);
+  }
+  
+  /* Handle on hover */
+  .field::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }/* width */
+.field::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+ .field ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+ .field ::-webkit-scrollbar-thumb {
+    background: rgb(72, 5, 188);
+  }
+  
+  /* Handle on hover */
+.field  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  @media only screen and (min-width:312px) and (max-width:612px) {
+   
+}
+
+@media only screen and (min-width:612px) and (max-width:840px) {
+    
+}
+

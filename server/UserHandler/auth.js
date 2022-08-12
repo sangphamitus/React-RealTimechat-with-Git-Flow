@@ -1,7 +1,7 @@
 const router=require('express').Router();
-const User=require('./signupHandle');
+const User=require('../Model/signupHandle');
 const Scrypt=require('bcrypt');
-const {registerValidation,loginValidation} =require('./validation')
+const {registerValidation,loginValidation} =require('../validation')
 
 router.post('/register',async(req,res)=> {
 

@@ -46,42 +46,43 @@ export default function Reg()
 
     return(
         <div className="container" id="loginContainer">
-          <div className="card">
+          <div className="card p-0">
            
             <form>
                 <h2 className="centertext">Register</h2>
                 
-                <fieldset>
-                    <p>
-                    <label>Username:</label>
+                <fieldset className="col">
+                <p className="param-login">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                <div className="row">
                     <input type="text" placeholder="username" onChange={event=> {
                         setName(event.target.value);
                         setMessage('');
                     }}></input> 
-                    </p>
-                    <p> 
-                    <label>Password:</label>
+                  </div>
+                  <div className="row">
                     <input type="password"  placeholder="password" onChange={event=> {
                         setPassword(event.target.value);
                         setMessage('');
                     }}></input>
-                    </p>
-                    <p> 
-                    <label>Password confirm:</label>
+                    </div>
+                    <div className="row">
                     <input type="password"  placeholder="password confirm" onChange={event=> {
                         setPasswordConf(event.target.value);
                         setMessage('');
                     }}></input>
-                    </p>
+              </div>
                     {alert()}
                     
-                    <div className="buttonbox">
+                    <div className="button-box">
                         
                         <button  onClick= {event=>(!name||!password||!passwordConfirm)?event.preventDefault():ActiveReg(event) } type="submit"  className={(!name||!password||!passwordConfirm)?'disable':null}>Sign up</button>   
                         
                     </div>
                     <div className="loginHandle">
-                    <Link  to={'/'} > Already have account? </Link>
+                    <p>Already have account?  <Link  className="Link" to={'/'} > Login </Link></p>
+                        
+                   
                     </div>
                 </fieldset>
             </form>

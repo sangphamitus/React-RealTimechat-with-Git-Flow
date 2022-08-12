@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState} from "react";
 import './Join.css'
 import {Link} from 'react-router-dom'
 
@@ -54,42 +54,54 @@ export default function Join()
     }
 
     return(
+       
         <div className="container" id="loginContainer">
+                <div className="title-card">
+                <h3 className="m-0">Good to see you again:</h3>
+                <h1 className="title-header">WELCOME BACK</h1>
+                <div className="line"></div>
+                <p className="param">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    </p>
+            </div>
+        <div className="disp-block">
+        <div className="Login-field">
           <div className="card">
            
             <form>
-                <h2 className="centertext">JOIN LOGIN</h2>
-                
-                <fieldset>
-                    <p>
-                    <label>Username:</label>
-                    <input type="text" placeholder="username" onChange={event=> {
+                <h2 className="centertext">Login Account</h2>
+                <p className="param-login">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                <fieldset className="col">
+               
+                    <div className="row">
+                    
+                    <input type="text" placeholder="Username" onChange={event=> {
                         setName(event.target.value);
                         setMessage('');
                     }}></input> 
-                    </p>
-                    <p> 
-                    <label>Pass:</label>
-                    <input type="password"  placeholder="password" onChange={event=> {
+                 </div> 
+                 <div className="row">
+                    <input type="password"  placeholder="Password" onChange={event=> {
                         setPassword(event.target.value);
                         setMessage('');
                     }}></input>
-                    </p>
+                  </div>
                     {alert()}
-                    <div className="buttonbox">
-
-                        <button  type="submit"    onClick= {event=>(!name||!password)?event.preventDefault():ActiveLogin(event) }
-                          className={(!name||!password)?'disable':null}>Login</button>
-                        
-                        
+                    <div className="button-box">
+                        <button  type="submit"  onClick= {event=>(!name||!password)?event.preventDefault():ActiveLogin(event) }
+                          className={(!name||!password)?'disable':null}>Login</button>               
                     </div>
                     <div className="loginHandle">
-                    <Link  to={'/signup'} > Don't have account? </Link>
+                    <p>New User? <Link className="Link" to={'/signup'} > Sign Up </Link></p>
+                        
                     </div>
                   
                 </fieldset>
             </form>
           </div>       
+          </div>
+          </div>
         </div>
+  
     )
 }
