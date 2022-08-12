@@ -11,9 +11,7 @@ const userHandle=require('./UserHandler/userHandle');
 const contact=require('./ContactHandler/getContact');
 const messagesHandle=require('./messagesHandle/getMessagesHandle')
 const postHandle=require('./postHandler/getPost');
-
-var bodyParser = require('body-parser')
-
+const PORT=process.env.PORT||5000;
 
 
 
@@ -60,6 +58,6 @@ io.on('connect',(socket)=>{
 
 })
 
-server.listen(process.env.PORT||5000,()=>{
-    console.log(`Listen on Port:  `);
+server.listen(PORT ,()=>{
+    console.log(`Listen on Port:  ${PORT}`);
 })
