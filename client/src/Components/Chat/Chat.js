@@ -16,8 +16,8 @@ import { faCaretLeft,faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 let hrefPid;
 let socket;
-const ENDPOINT = 'http://localhost:5000';
-const ENDPOINTSOCKET='localhost:5000';
+const ENDPOINT = 'https://pps-reactappchatandpost.herokuapp.com';
+const ENDPOINTSOCKET='pps-reactappchatandpost.herokuapp.com';
 function ViewPoint({username})
 {
     

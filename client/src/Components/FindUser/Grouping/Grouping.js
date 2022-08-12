@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX} from '@fortawesome/free-solid-svg-icons'
 
 const valid = new RegExp('[a-zA-Z 0-9]');
-const ENDPOINT="http://localhost:5000"
+const ENDPOINT = 'https://pps-reactappchatandpost.herokuapp.com';
+const ENDPOINTSOCKET='pps-reactappchatandpost.herokuapp.com';
 export default function Grouping({exitCallback,username,callback})
 {
     const [choosen,setChoosen]=useState([]);

@@ -5,7 +5,8 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 
 
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://pps-reactappchatandpost.herokuapp.com';
+const ENDPOINTSOCKET='pps-reactappchatandpost.herokuapp.com';
 
 
 export default function Join()

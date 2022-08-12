@@ -5,7 +5,8 @@ import UserFinded from "./UserFinded/UserFinded";
 import Grouping from "./Grouping/Grouping"
 
 const valid = new RegExp('[a-zA-Z 0-9]');
-const ENDPOINT="http://localhost:5000"
+const ENDPOINT = 'https://pps-reactappchatandpost.herokuapp.com';
+const ENDPOINTSOCKET='pps-reactappchatandpost.herokuapp.com';
 export default function FindUser({callback,main})
 {
     const [find,setFind]=useState('');

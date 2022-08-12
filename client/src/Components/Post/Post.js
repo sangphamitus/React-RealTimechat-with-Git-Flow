@@ -6,7 +6,8 @@ import '../Post/Post.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart,faComment } from '@fortawesome/free-solid-svg-icons'
 import SubPost from "./SubPost/SubPost";
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://pps-reactappchatandpost.herokuapp.com';
+const ENDPOINTSOCKET='pps-reactappchatandpost.herokuapp.com';
 
 let hrefPid;
 export default function Post()

@@ -5,7 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios'
 
 
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://pps-reactappchatandpost.herokuapp.com';
+const ENDPOINTSOCKET='pps-reactappchatandpost.herokuapp.com';
 
 
 export default function Reg()

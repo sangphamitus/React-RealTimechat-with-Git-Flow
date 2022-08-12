@@ -1,4 +1,4 @@
-POST http://localhost:5000/api/post/fetchPost
+POST https://pps-reactappchatandpost.herokuapp.com/api/post/fetchPost
 Content-Type: application/json
 
 {
