@@ -25,7 +25,7 @@ router.post('/postPost',(req,res)=> {
 })
 
 router.post('/fetchPost',async(req,res)=>{
-    const listPosts=await post.find().sort({$natural:1}).limit(10);
+    const listPosts=await post.find().sort({$natural:-1}).limit(20);
     res.status(200).send({message:"success",listPosts:{listPosts}})
 })
 
