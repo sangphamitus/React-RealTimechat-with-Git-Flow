@@ -28,7 +28,13 @@ export default function Reg()
         
             } ,{headers:{
                 'Content-Type':'application/json'
-            }}  ).then(res=>{setMessage(res.data.message);window.location.pathname="/"})
+            }}  ).then(res=>{
+                            setMessage(res.data.message);
+                                if(message==='success')
+                           
+                           {     window.location.pathname="/";
+                             }
+                      })
             .catch(error=>setMessage(error))
             
         }

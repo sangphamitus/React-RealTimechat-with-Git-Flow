@@ -3,8 +3,8 @@ import './UserFinded.css';
 import queryString from 'query-string';
 import axios from 'axios'
 
-
-const ENDPOINT="http://localhost:5000"
+const ENDPOINT = 'https://pps-reactappchatandpost.herokuapp.com';
+const ENDPOINTSOCKET='pps-reactappchatandpost.herokuapp.com';
 
 export default function UserFinded({users,callback,callbackSearch,main})
 {
